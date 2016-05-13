@@ -120,7 +120,7 @@ module PagarMe
         return PagarMe::PagarMeObject if resource_name.nil?
 
         if RESOURCES.include? resource_name.to_sym
-          Object.const_get "PagarMe::#{capitalize_name resource_name}"
+          Object.const_get("PagarMe").const_get("#{capitalize_name(resource_name)}")
         else
           PagarMe::PagarMeObject
         end
