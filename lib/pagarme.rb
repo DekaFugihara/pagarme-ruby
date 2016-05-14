@@ -24,11 +24,7 @@ module PagarMe
   self.api_endpoint = 'https://api.pagar.me/1'
   self.open_timeout = 30
   self.timeout      = 90
-  if Rails.env.production?
-    self.api_key    = ENV['PAGARME_API_KEY']
-  else
-    self.api_key    = ENV['PAGARME_API_KEY']
-  end
+  self.api_key      = "ak_test_Ytru3s0YBc6Z5mDkGrBr6nIn1YLaGh"
 
   # TODO: Remove deprecated PagarMe.validate_fingerprint
   def self.validate_fingerprint(*args)
